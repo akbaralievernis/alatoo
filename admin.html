@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход для продавцов - Ala-Too Mobile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-login-page">
+    <div class="login-container">
+        <div class="login-header">
+            <h1><i class="fas fa-store"></i> Ala-Too Mobile</h1>
+            <p>Панель управления для продавцов</p>
+        </div>
+        
+        <div class="login-form">
+            <h2>Вход в личный кабинет</h2>
+            
+            <div id="loginError" class="error-message" style="display: none;"></div>
+            
+            <div class="form-group">
+                <label for="username"><i class="fas fa-user"></i> Логин</label>
+                <input type="text" id="username" placeholder="Введите логин">
+            </div>
+            
+            <div class="form-group">
+                <label for="password"><i class="fas fa-lock"></i> Пароль</label>
+                <input type="password" id="password" placeholder="Введите пароль">
+            </div>
+            
+            <button class="btn btn-primary btn-block" onclick="sellerLogin()">
+                <i class="fas fa-sign-in-alt"></i> Войти
+            </button>
+            
+            <div class="login-links">
+                <a href="index.html"><i class="fas fa-home"></i> На главную</a>
+                <a href="#" onclick="showRegisterForm()"><i class="fas fa-user-plus"></i> Регистрация</a>
+            </div>
+        </div>
+        
+        <!-- Форма регистрации (скрыта по умолчанию) -->
+        <div id="registerForm" class="login-form" style="display: none;">
+            <h2>Регистрация нового продавца</h2>
+            
+            <div id="registerError" class="error-message" style="display: none;"></div>
+            
+            <div class="form-group">
+                <label for="registerUsername"><i class="fas fa-user"></i> Логин *</label>
+                <input type="text" id="registerUsername" placeholder="Придумайте логин">
+            </div>
+            
+            <div class="form-group">
+                <label for="registerPassword"><i class="fas fa-lock"></i> Пароль *</label>
+                <input type="password" id="registerPassword" placeholder="Придумайте пароль">
+            </div>
+            
+            <div class="form-group">
+                <label for="registerStoreName"><i class="fas fa-store"></i> Название магазина *</label>
+                <input type="text" id="registerStoreName" placeholder="Название вашего магазина">
+            </div>
+            
+            <div class="form-group">
+                <label for="registerEmail"><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" id="registerEmail" placeholder="Ваш email">
+            </div>
+            
+            <div class="form-group">
+                <label for="registerPhone"><i class="fas fa-phone"></i> Телефон</label>
+                <input type="tel" id="registerPhone" placeholder="+996 XXX XXX XXX">
+            </div>
+            
+            <div class="form-group">
+                <label for="registerDescription"><i class="fas fa-info-circle"></i> Описание магазина</label>
+                <textarea id="registerDescription" rows="2" placeholder="Краткое описание вашего магазина"></textarea>
+            </div>
+            
+            <div class="form-actions">
+                <button class="btn btn-outline" onclick="showLoginForm()">
+                    <i class="fas fa-arrow-left"></i> Назад
+                </button>
+                <button class="btn btn-success" onclick="registerSeller()">
+                    <i class="fas fa-check"></i> Зарегистрироваться
+                </button>
+            </div>
+        </div>
+        
+        <div class="test-accounts">
+            <p><strong>Тестовые аккаунты:</strong></p>
+            <p>Логин: <code>apple_center</code> | Пароль: <code>apple123</code></p>
+            <p>Логин: <code>samsung_kg</code> | Пароль: <code>samsung123</code></p>
+            <p>Логин: <code>xiaomi_kg</code> | Пароль: <code>xiaomi123</code></p>
+        </div>
+    </div>
+
+    <script src="seller-data.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказы - Ala-Too Mobile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-page">
+    <!-- Боковая панель -->
+    <div class="admin-sidebar">
+        <div class="seller-info">
+            <img id="sellerLogo" src="/sellers/default.jpg" alt="Логотип">
+            <h3 id="sellerName">Загрузка...</h3>
+            <p id="sellerEmail"></p>
+        </div>
+        
+        <nav class="admin-nav">
+            <a href="seller-dashboard.html" class="nav-item">
+                <i class="fas fa-tachometer-alt"></i> Панель управления
+            </a>
+            <a href="seller-products.html" class="nav-item">
+                <i class="fas fa-box"></i> Мои товары
+            </a>
+            <a href="seller-orders.html" class="nav-item active">
+                <i class="fas fa-shopping-cart"></i> Заказы
+            </a>
+            <a href="#" class="nav-item" onclick="showShopSettings()">
+                <i class="fas fa-store"></i> Мой магазин
+            </a>
+            <a href="#" class="nav-item" onclick="showSettings()">
+                <i class="fas fa-cog"></i> Настройки
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <button class="btn btn-primary btn-block" onclick="window.open('index.html?seller=' + currentSeller.id, '_blank')">
+                <i class="fas fa-external-link-alt"></i> Мой магазин
+            </button>
+            <button class="btn btn-danger btn-block" onclick="sellerLogout()">
+                <i class="fas fa-sign-out-alt"></i> Выйти
+            </button>
+        </div>
+    </div>
+    
+    <div class="admin-content">
+        <div class="admin-header">
+            <h1>Управление заказами</h1>
+            <div class="header-actions">
+                <button class="btn btn-primary" onclick="refreshOrders()">
+                    <i class="fas fa-sync-alt"></i> Обновить
+                </button>
+            </div>
+        </div>
+        
+        <div class="orders-filter">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="orderSearch" placeholder="Поиск заказов..." 
+                       onkeyup="filterOrders()">
+            </div>
+            
+            <select id="orderStatus" onchange="filterOrders()">
+                <option value="all">Все статусы</option>
+                <option value="pending">В ожидании</option>
+                <option value="processing">В обработке</option>
+                <option value="completed">Выполнен</option>
+                <option value="cancelled">Отменен</option>
+            </select>
+            
+            <input type="date" id="orderDate" onchange="filterOrders()">
+        </div>
+        
+        <div class="orders-summary">
+            <div class="summary-card">
+                <span class="summary-label">Всего заказов</span>
+                <span class="summary-value" id="totalOrders">0</span>
+            </div>
+            <div class="summary-card">
+                <span class="summary-label">В ожидании</span>
+                <span class="summary-value" id="pendingOrders">0</span>
+            </div>
+            <div class="summary-card">
+                <span class="summary-label">В обработке</span>
+                <span class="summary-value" id="processingOrders">0</span>
+            </div>
+            <div class="summary-card">
+                <span class="summary-label">Выполнено</span>
+                <span class="summary-value" id="completedOrders">0</span>
+            </div>
+        </div>
+        
+        <div class="orders-list" id="ordersList">
+            <!-- Список заказов загружается через JS -->
+        </div>
+        
+        <div class="empty-state" id="emptyOrders" style="display: none;">
+            <i class="fas fa-shopping-cart"></i>
+            <h3>Нет заказов</h3>
+            <p>Здесь будут отображаться заказы от ваших клиентов</p>
+        </div>
+    </div>
+    
+    <!-- Модальное окно деталей заказа -->
+    <div id="orderDetailsModal" class="modal">
+        <div class="modal-content">
+            <h2>Детали заказа</h2>
+            
+            <div class="order-details">
+                <div class="detail-row">
+                    <span class="detail-label">Номер заказа:</span>
+                    <span class="detail-value" id="detailOrderId"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Дата:</span>
+                    <span class="detail-value" id="detailOrderDate"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Товар:</span>
+                    <span class="detail-value" id="detailProductName"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Клиент:</span>
+                    <span class="detail-value" id="detailCustomer"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Телефон:</span>
+                    <span class="detail-value" id="detailPhone"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Адрес:</span>
+                    <span class="detail-value" id="detailAddress"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Сумма:</span>
+                    <span class="detail-value" id="detailAmount"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Статус:</span>
+                    <span class="detail-value">
+                        <select id="detailStatus">
+                            <option value="pending">В ожидании</option>
+                            <option value="processing">В обработке</option>
+                            <option value="completed">Выполнен</option>
+                            <option value="cancelled">Отменен</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="modal-actions">
+                <input type="hidden" id="detailOrderIdInput">
+                <button class="btn btn-outline" onclick="closeModal('orderDetailsModal')">Закрыть</button>
+                <button class="btn btn-primary" onclick="updateOrderStatus()">Сохранить изменения</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="seller-data.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

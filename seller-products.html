@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои товары - Ala-Too Mobile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-page">
+    <!-- Боковая панель -->
+    <div class="admin-sidebar">
+        <div class="seller-info">
+            <img id="sellerLogo" src="/sellers/default.jpg" alt="Логотип">
+            <h3 id="sellerName">Загрузка...</h3>
+            <p id="sellerEmail"></p>
+        </div>
+        
+        <nav class="admin-nav">
+            <a href="seller-dashboard.html" class="nav-item">
+                <i class="fas fa-tachometer-alt"></i> Панель управления
+            </a>
+            <a href="seller-products.html" class="nav-item active">
+                <i class="fas fa-box"></i> Мои товары
+            </a>
+            <a href="seller-orders.html" class="nav-item">
+                <i class="fas fa-shopping-cart"></i> Заказы
+            </a>
+            <a href="#" class="nav-item" onclick="showShopSettings()">
+                <i class="fas fa-store"></i> Мой магазин
+            </a>
+            <a href="#" class="nav-item" onclick="showSettings()">
+                <i class="fas fa-cog"></i> Настройки
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <button class="btn btn-primary btn-block" onclick="window.open('index.html?seller=' + currentSeller.id, '_blank')">
+                <i class="fas fa-external-link-alt"></i> Мой магазин
+            </button>
+            <button class="btn btn-danger btn-block" onclick="sellerLogout()">
+                <i class="fas fa-sign-out-alt"></i> Выйти
+            </button>
+        </div>
+    </div>
+    
+    <div class="admin-content">
+        <div class="admin-header">
+            <h1>Управление товарами</h1>
+            <div class="header-actions">
+                <button class="btn btn-primary" onclick="showAddProductModal()">
+                    <i class="fas fa-plus"></i> Добавить товар
+                </button>
+            </div>
+        </div>
+        
+        <div class="products-filter">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="productSearch" placeholder="Поиск товаров..." 
+                       onkeyup="filterProducts()">
+            </div>
+            
+            <select id="productCategory" onchange="filterProducts()">
+                <option value="all">Все категории</option>
+                <option value="apple">Apple</option>
+                <option value="samsung">Samsung</option>
+                <option value="xiaomi">Xiaomi</option>
+                <option value="other">Другое</option>
+            </select>
+            
+            <select id="productSort" onchange="sortProducts()">
+                <option value="newest">Сначала новые</option>
+                <option value="price_asc">По возрастанию цены</option>
+                <option value="price_desc">По убыванию цены</option>
+                <option value="name">По названию</option>
+            </select>
+        </div>
+        
+        <div class="products-summary">
+            <span id="productsSummaryText">Загружаем товары...</span>
+        </div>
+        
+        <div class="products-list" id="productsList">
+            <!-- Список товаров загружается через JS -->
+        </div>
+        
+        <div class="empty-state" id="emptyProducts" style="display: none;">
+            <i class="fas fa-box-open"></i>
+            <h3>Нет товаров</h3>
+            <p>Добавьте первый товар, чтобы начать продажи</p>
+            <button class="btn btn-primary" onclick="showAddProductModal()">
+                <i class="fas fa-plus"></i> Добавить товар
+            </button>
+        </div>
+    </div>
+    
+    <!-- Модальное окно добавления товара -->
+    <div id="addProductModal" class="modal">
+        <div class="modal-content">
+            <h2>Добавить товар</h2>
+            
+            <div class="form-group">
+                <label>Название товара *</label>
+                <input type="text" id="productName" placeholder="iPhone 15 Pro Max">
+            </div>
+            
+            <div class="form-group">
+                <label>Категория *</label>
+                <select id="productCategorySelect">
+                    <option value="apple">Apple</option>
+                    <option value="samsung">Samsung</option>
+                    <option value="xiaomi">Xiaomi</option>
+                    <option value="other">Другое</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Цена (сом) *</label>
+                <input type="number" id="productPrice" placeholder="149990">
+            </div>
+            
+            <div class="form-group">
+                <label>Старая цена (сом)</label>
+                <input type="number" id="productOldPrice" placeholder="169990">
+            </div>
+            
+            <div class="form-group">
+                <label>Описание *</label>
+                <textarea id="productDescription" rows="3" placeholder="Описание товара..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Характеристики (JSON)</label>
+                <textarea id="productSpecs" rows="3" placeholder='{"display": "6.7\"", "processor": "A17 Pro", "camera": "48MP"}'></textarea>
+                <small>Введите характеристики в формате JSON</small>
+            </div>
+            
+            <div class="form-group">
+                <label>Цвета (через запятую)</label>
+                <input type="text" id="productColors" placeholder="Черный, Белый, Синий">
+            </div>
+            
+            <div class="form-group">
+                <label>Память (через запятую)</label>
+                <input type="text" id="productStorage" placeholder="128GB, 256GB, 512GB">
+            </div>
+            
+            <div class="form-group">
+                <label>Изображения (URL через запятую) *</label>
+                <textarea id="productImages" rows="2" placeholder="https://example.com/photo1.jpg, https://example.com/photo2.jpg"></textarea>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="btn btn-outline" onclick="closeModal('addProductModal')">Отмена</button>
+                <button class="btn btn-primary" onclick="addNewProduct()">Добавить товар</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Модальное окно редактирования товара -->
+    <div id="editProductModal" class="modal">
+        <div class="modal-content">
+            <h2>Редактировать товар</h2>
+            
+            <input type="hidden" id="editProductId">
+            
+            <div class="form-group">
+                <label>Название товара *</label>
+                <input type="text" id="editProductName">
+            </div>
+            
+            <div class="form-group">
+                <label>Категория *</label>
+                <select id="editProductCategory">
+                    <option value="apple">Apple</option>
+                    <option value="samsung">Samsung</option>
+                    <option value="xiaomi">Xiaomi</option>
+                    <option value="other">Другое</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Цена (сом) *</label>
+                <input type="number" id="editProductPrice">
+            </div>
+            
+            <div class="form-group">
+                <label>Старая цена (сом)</label>
+                <input type="number" id="editProductOldPrice">
+            </div>
+            
+            <div class="form-group">
+                <label>Описание *</label>
+                <textarea id="editProductDescription" rows="3"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Характеристики (JSON)</label>
+                <textarea id="editProductSpecs" rows="3"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Цвета (через запятую)</label>
+                <input type="text" id="editProductColors">
+            </div>
+            
+            <div class="form-group">
+                <label>Память (через запятую)</label>
+                <input type="text" id="editProductStorage">
+            </div>
+            
+            <div class="form-group">
+                <label>Изображения (URL через запятую) *</label>
+                <textarea id="editProductImages" rows="2"></textarea>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="btn btn-outline" onclick="closeModal('editProductModal')">Отмена</button>
+                <button class="btn btn-primary" onclick="updateProduct()">Сохранить изменения</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="seller-data.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

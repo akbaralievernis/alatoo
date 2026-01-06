@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ala-Too Mobile - Продажа смартфонов и аксессуаров</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Ala-Too Mobile</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Меню">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Главная</span>
+                </a>
+                <a href="#products" class="nav-link">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Продукты</span>
+                </a>
+                <a href="#tech" class="nav-link">
+                    <i class="fas fa-microchip"></i>
+                    <span>Технологии</span>
+                </a>
+                <a href="#location" class="nav-link">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Контакты</span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="user-actions">
+                    <a href="#" class="btn btn-icon" aria-label="Войти">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="#" class="btn btn-icon" aria-label="Избранное">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <button class="btn btn-primary cart-btn" onclick="openCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Корзина</span>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero секция -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">Новинка 2025</div>
+                <h1 class="hero-title">Будущее Технологий в Ваших Руках</h1>
+                <p class="hero-subtitle">Ala-Too Mobile предлагает самые последние смартфоны и аксессуары от ведущих мировых брендов. Мы соединяем инновации с доступностью для каждого клиента.</p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn-primary btn-large">
+                        <span>Посмотреть товары</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#tech" class="btn btn-outline btn-large">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Смотреть видео</span>
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">24/7</div>
+                        <div class="stat-label">Поддержка</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Гарантия</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">3-5 дн.</div>
+                        <div class="stat-label">Доставка</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="phone-showcase">
+                    <div class="phone-main">
+                        <img src="/photo/Изображение WhatsApp 2025-12-05 в 17.47.42_b90a693d.jpg" alt="Новейшие смартфоны">
+                    </div>
+                    <div class="phone-bubble phone-bubble-1">
+                        <img src="/photo/iPhone 17 Pro, iPhone 17 Pro Max.jpg" alt="iPhone 17 Pro Max">
+                    </div>
+                    <div class="phone-bubble phone-bubble-2">
+                        <img src="/photo/Samsung S25 Ultra.jpg" alt="Samsung S25 Ultra">
+                    </div>
+                    <div class="phone-bubble phone-bubble-3">
+                        <img src="/photo/Xiaomi 17 Pro.jpg" alt="Xiaomi 17 Pro Max">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Бренды -->
+    <section class="brands-section">
+        <div class="section-container">
+            <h2 class="section-subtitle">Работаем с ведущими брендами</h2>
+            <div class="brands-grid">
+                <div class="brand-item">
+                    <i class="fab fa-apple"></i>
+                    <span>Apple</span>
+                </div>
+                <div class="brand-item">
+                    <i class="fab fa-android"></i>
+                    <span>Samsung</span>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-bolt"></i>
+                    <span>Xiaomi</span>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-camera"></i>
+                    <span>Google Pixel</span>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-headphones"></i>
+                    <span>Huawei</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Новые продукты -->
+    <section id="products" class="products-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-badge">Каталог</div>
+                <h2 class="section-title">Новейшие Смартфоны</h2>
+                <p class="section-description">Откройте для себя последние модели от Apple, Samsung, Xiaomi и других ведущих брендов</p>
+            </div>
+            
+            <div class="products-filter">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">Все</button>
+                    <button class="filter-tab" data-filter="apple">Apple</button>
+                    <button class="filter-tab" data-filter="samsung">Samsung</button>
+                    <button class="filter-tab" data-filter="xiaomi">Xiaomi</button>
+                    <button class="filter-tab" data-filter="new">Новинки</button>
+                    <button class="filter-tab" data-filter="sale">Распродажа</button>
+                </div>
+                
+                <div class="filter-sort">
+                    <select class="sort-select">
+                        <option value="price-asc">По возрастанию цены</option>
+                        <option value="price-desc">По убыванию цены</option>
+                        <option value="newest">Сначала новые</option>
+                        <option value="popular">По популярности</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <!-- iPhone модели -->
+                <!-- iPhone 17 Pro Max -->
+                <div class="product-card" data-category="apple new">
+                    <div class="product-badge new">NEW</div>
+                    <div class="product-badge discount">-15%</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/iPhone 17 Pro, iPhone 17 Pro Max.jpg" alt="iPhone 17 Pro Max">
+                        <button class="product-quick-view" data-product="1">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Apple</div>
+                        <h3 class="product-title">iPhone 17 Pro Max</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>A19 Pro</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.9"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>48 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Супермощный флагман с инновационной камерой и OLED-дисплеем</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-white active"></div>
+                            <div class="color-dot color-black"></div>
+                            <div class="color-dot color-blue"></div>
+                            <div class="color-dot color-gold"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">1TB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">169 990 сом</div>
+                            <div class="price-old">199 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="1">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="1">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iPhone 16 Pro Max -->
+                <div class="product-card" data-category="apple">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Apple iPhone 16 Pro Max 1TB in Black Titanium _ Nebraska Furniture Mart.jpg" alt="iPhone 16 Pro Max">
+                        <button class="product-quick-view" data-product="2">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Apple</div>
+                        <h3 class="product-title">iPhone 16 Pro Max</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>A18 Pro</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.7"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>48 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Флагман Apple с улучшенной камерой и временем работы</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-black active"></div>
+                            <div class="color-dot color-white"></div>
+                            <div class="color-dot color-blue"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">1TB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">159 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="2">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="2">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iPhone 15 Pro Max -->
+                <div class="product-card" data-category="apple sale">
+                    <div class="product-badge sale">SALE</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Без названия (1).jpg" alt="iPhone 15 Pro Max">
+                        <button class="product-quick-view" data-product="3">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Apple</div>
+                        <h3 class="product-title">iPhone 15 Pro Max</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>A17 Pro</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.7"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>48 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Мощный iPhone с титановым корпусом и USB-C</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-black active"></div>
+                            <div class="color-dot color-white"></div>
+                            <div class="color-dot color-blue"></div>
+                            <div class="color-dot color-gold"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">1TB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">149 990 сом</div>
+                            <div class="price-old">169 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="3">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="3">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iPhone 17 Pro -->
+                <div class="product-card" data-category="apple sale">
+                    <div class="product-badge sale">SALE</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/iPhone 17 Pro, iPhone 17 Pro Max.jpg" alt="iPhone 17 Pro">
+                        <button class="product-quick-view" data-product="4">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Apple</div>
+                        <h3 class="product-title">iPhone 17 Pro</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>A19 Pro</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.3"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>48 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Компактный Pro с теми же функциями что и Max версия</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-white active"></div>
+                            <div class="color-dot color-black"></div>
+                            <div class="color-dot color-blue"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">1TB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">139 990 сом</div>
+                            <div class="price-old">159 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="4">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="4">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iPhone 16 Pro -->
+                <div class="product-card" data-category="apple sale">
+                    <div class="product-badge sale">SALE</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Apple iPhone 16 Pro Max 1TB in Black Titanium _ Nebraska Furniture Mart.jpg" alt="iPhone 16 Pro">
+                        <button class="product-quick-view" data-product="5">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Apple</div>
+                        <h3 class="product-title">iPhone 16 Pro</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>A18 Pro</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.3"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>48 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Профессиональная камера в компактном корпусе</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-black active"></div>
+                            <div class="color-dot color-white"></div>
+                            <div class="color-dot color-blue"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">1TB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">129 990 сом</div>
+                            <div class="price-old">149 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="5">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="5">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iPhone 15 Pro -->
+                <div class="product-card" data-category="apple sale">
+                    <div class="product-badge sale">SALE</div>
+                    <div class="product-badge discount">-25%</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Без названия (1).jpg" alt="iPhone 15 Pro">
+                        <button class="product-quick-view" data-product="6">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Apple</div>
+                        <h3 class="product-title">iPhone 15 Pro</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>A17 Pro</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.1"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>48 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Титановый дизайн и профессиональная камера</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-black active"></div>
+                            <div class="color-dot color-white"></div>
+                            <div class="color-dot color-blue"></div>
+                            <div class="color-dot color-gold"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">256GB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">99 990 сом</div>
+                            <div class="price-old">129 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="6">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="6">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iPhone 17 -->
+                <div class="product-card" data-category="apple sale">
+                    <div class="product-badge sale">SALE</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/❣️現貨❣️Apple iPhone 17 256GB 全新 桃園.jpg" alt="iPhone 17">
+                        <button class="product-quick-view" data-product="7">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Apple</div>
+                        <h3 class="product-title">iPhone 17</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>A18</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.1"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>48 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Новый дизайн и улучшенная камера основной серии</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-black active"></div>
+                            <div class="color-dot color-blue"></div>
+                            <div class="color-dot color-pink"></div>
+                            <div class="color-dot color-yellow"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">256GB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">119 990 сом</div>
+                            <div class="price-old">139 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="7">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="7">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iPhone 16 -->
+                <div class="product-card" data-category="apple sale">
+                    <div class="product-badge sale">SALE</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/ip 16 plus.jpg" alt="iPhone 16">
+                        <button class="product-quick-view" data-product="8">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Apple</div>
+                        <h3 class="product-title">iPhone 16</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>A17</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.1"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>48 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Популярная модель с отличным соотношением цены и качества</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-blue active"></div>
+                            <div class="color-dot color-black"></div>
+                            <div class="color-dot color-pink"></div>
+                            <div class="color-dot color-green"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">256GB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">99 990 сом</div>
+                            <div class="price-old">119 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="8">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="8">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iPhone 15 -->
+                <div class="product-card" data-category="apple sale">
+                    <div class="product-badge sale">SALE</div>
+                    <div class="product-badge discount">-30%</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Apple iPhone 15 Plus 128GB with Content Support Voucher.jpg" alt="iPhone 15">
+                        <button class="product-quick-view" data-product="9">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Apple</div>
+                        <h3 class="product-title">iPhone 15</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>A16</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.1"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>48 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Классический iPhone с USB-C и динамическим островом</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-black active"></div>
+                            <div class="color-dot color-blue"></div>
+                            <div class="color-dot color-pink"></div>
+                            <div class="color-dot color-yellow"></div>
+                            <div class="color-dot color-green"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">256GB</div>
+                            <div class="memory-option">128GB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">89 990 сом</div>
+                            <div class="price-old">119 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="9">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="9">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Samsung модели -->
+                <!-- Samsung Galaxy S25 Ultra -->
+                <div class="product-card" data-category="samsung new">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Samsung S25 Ultra.jpg" alt="Samsung Galaxy S25 Ultra">
+                        <button class="product-quick-view" data-product="10">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Samsung</div>
+                        <h3 class="product-title">Samsung Galaxy S25 Ultra</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8 Gen 3</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.8"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>200 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Флагман Samsung с революционной камерой и стилусом S-Pen</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-black active"></div>
+                            <div class="color-dot color-purple"></div>
+                            <div class="color-dot color-green"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">1TB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">124 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="10">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="10">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Samsung Galaxy S24 Ultra -->
+                <div class="product-card" data-category="samsung sale">
+                    <div class="product-badge sale">SALE</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Galaxy s24 ultra.jpg" alt="Samsung Galaxy S24 Ultra">
+                        <button class="product-quick-view" data-product="11">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Samsung</div>
+                        <h3 class="product-title">Samsung Galaxy S24 Ultra</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8 Gen 2</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.8"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>200 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Мощный флагман с AI функциями и титановым корпусом</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-black active"></div>
+                            <div class="color-dot color-gray"></div>
+                            <div class="color-dot color-purple"></div>
+                            <div class="color-dot color-yellow"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">1TB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">123 990 сом</div>
+                            <div class="price-old">139 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="11">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="11">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Samsung Galaxy S23 Ultra -->
+                <div class="product-card" data-category="samsung sale">
+                    <div class="product-badge sale">SALE</div>
+                    <div class="product-badge discount">-20%</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Celular Samsung Galaxy S23 Ultra 1TB Black.jpg" alt="Samsung Galaxy S23 Ultra">
+                        <button class="product-quick-view" data-product="12">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Samsung</div>
+                        <h3 class="product-title">Samsung Galaxy S23 Ultra</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8 Gen 2</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.8"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>200 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Легендарный флагман с изогнутым дисплеем и S-Pen</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-black active"></div>
+                            <div class="color-dot color-green"></div>
+                            <div class="color-dot color-cream"></div>
+                            <div class="color-dot color-lavender"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">1TB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">92 990 сом</div>
+                            <div class="price-old">119 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="12">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="12">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Samsung Galaxy S25+ -->
+                <div class="product-card" data-category="samsung new">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Samsung Galaxy S25+.jpg" alt="Samsung Galaxy S25+">
+                        <button class="product-quick-view" data-product="13">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Samsung</div>
+                        <h3 class="product-title">Samsung Galaxy S25+</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8 Gen 3</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.7"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>50 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Большой экран и мощная батарея в тонком корпусе</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-black active"></div>
+                            <div class="color-dot color-blue"></div>
+                            <div class="color-dot color-violet"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">256GB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">94 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="13">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="13">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Samsung Galaxy S24+ -->
+                <div class="product-card" data-category="samsung new">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Samsung Galaxy S24 Plus 5G (Cobalt Violet, 12GB, 512GB Storage).jpg" alt="Samsung Galaxy S24+">
+                        <button class="product-quick-view" data-product="14">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Samsung</div>
+                        <h3 class="product-title">Samsung Galaxy S24+</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8 Gen 2</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.7"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>50 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">AI смартфон с мощной камерой и большим экраном</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-black active"></div>
+                            <div class="color-dot color-gray"></div>
+                            <div class="color-dot color-violet"></div>
+                            <div class="color-dot color-yellow"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">256GB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">93 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="14">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="14">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Samsung Galaxy S23+ -->
+                <div class="product-card" data-category="samsung new">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Galaxy S23 Plus Vert 256Go avec abonnement Forfait 2h 100Mo Samsung.jpg" alt="Samsung Galaxy S23+">
+                        <button class="product-quick-view" data-product="15">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Samsung</div>
+                        <h3 class="product-title">Samsung Galaxy S23+</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8 Gen 2</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.6"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>50 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Сбалансированный флагман с отличной автономностью</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-green active"></div>
+                            <div class="color-dot color-black"></div>
+                            <div class="color-dot color-cream"></div>
+                            <div class="color-dot color-lavender"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">256GB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">72 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="15">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="15">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Samsung Galaxy S25 -->
+                <div class="product-card" data-category="samsung new">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/S25.jpg" alt="Samsung Galaxy S25">
+                        <button class="product-quick-view" data-product="16">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Samsung</div>
+                        <h3 class="product-title">Samsung Galaxy S25</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8 Gen 3</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.2"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>50 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Компактный флагман с AI функциями и мощной камерой</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-black active"></div>
+                            <div class="color-dot color-blue"></div>
+                            <div class="color-dot color-pink"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">256GB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">84 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="16">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="16">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Samsung Galaxy S24 -->
+                <div class="product-card" data-category="samsung new">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/O Samsung Galaxy S24 é bom_ Ficha técnica.jpg" alt="Samsung Galaxy S24">
+                        <button class="product-quick-view" data-product="17">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Samsung</div>
+                        <h3 class="product-title">Samsung Galaxy S24</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8 Gen 2</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.2"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>50 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Компактный AI смартфон с круговой записью звонков</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-black active"></div>
+                            <div class="color-dot color-gray"></div>
+                            <div class="color-dot color-yellow"></div>
+                            <div class="color-dot color-violet"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">256GB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">83 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="17">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="17">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Samsung Galaxy S23 -->
+                <div class="product-card" data-category="samsung new">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Samsung Galaxy S23.jpg" alt="Samsung Galaxy S23">
+                        <button class="product-quick-view" data-product="18">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Samsung</div>
+                        <h3 class="product-title">Samsung Galaxy S23</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8 Gen 2</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.1"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>50 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Компактный и мощный смартфон для ежедневного использования</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-green active"></div>
+                            <div class="color-dot color-black"></div>
+                            <div class="color-dot color-cream"></div>
+                            <div class="color-dot color-lavender"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">256GB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">62 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="18">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="18">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xiaomi модели -->
+                <!-- Xiaomi 17 Pro Max -->
+                <div class="product-card" data-category="xiaomi new">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Xiaomi 17 Pro.jpg" alt="Xiaomi 17 Pro Max">
+                        <button class="product-quick-view" data-product="19">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Xiaomi</div>
+                        <h3 class="product-title">Xiaomi 17 Pro Max</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8 Gen 3</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.8"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>50 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Флагман Xiaomi с Leica камерой и быстрой зарядкой</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-white active"></div>
+                            <div class="color-dot color-black"></div>
+                            <div class="color-dot color-green"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">1TB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">96 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="19">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="19">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xiaomi 16 Pro Max -->
+                <div class="product-card" data-category="xiaomi new">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Original Xiaomi 17 Pro Max 512GB 16GB White China Model Unlocked GSM Opens in a new window or tab.jpg" alt="Xiaomi 16 Pro Max">
+                        <button class="product-quick-view" data-product="20">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Xiaomi</div>
+                        <h3 class="product-title">Xiaomi 16 Pro Max</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8 Gen 2</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.7"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>50 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Мощный смартфон с камерой Leica и быстрой зарядкой</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-white active"></div>
+                            <div class="color-dot color-black"></div>
+                            <div class="color-dot color-blue"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">1TB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">95 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="20">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="20">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xiaomi 15 Pro Max -->
+                <div class="product-card" data-category="xiaomi new">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Xiaomi 17 Pro Max.jpg" alt="Xiaomi 15 Pro Max">
+                        <button class="product-quick-view" data-product="21">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Xiaomi</div>
+                        <h3 class="product-title">Xiaomi 15 Pro Max</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8 Gen 2</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.7"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>50 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Флагман с камерой Leica и зарядкой 120W</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-white active"></div>
+                            <div class="color-dot color-black"></div>
+                            <div class="color-dot color-green"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">256GB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">84 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="21">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="21">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xiaomi 17 Ultra -->
+                <div class="product-card" data-category="xiaomi new">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Xiaomi 14 Ultra 5G (16GB RAM + 512GB)__$1,315_00Price.jpg" alt="Xiaomi 17 Ultra">
+                        <button class="product-quick-view" data-product="22">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Xiaomi</div>
+                        <h3 class="product-title">Xiaomi 17 Ultra</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8 Gen 3</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.8"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>50 МП x4</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Ультра флагман с четырьмя камерами Leica</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-black active"></div>
+                            <div class="color-dot color-white"></div>
+                            <div class="color-dot color-blue"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">1TB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">96 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="22">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="22">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xiaomi 16 Ultra -->
+                <div class="product-card" data-category="xiaomi new">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Xiaomi 14 Ultra 5G - Powerful Global Smartphone.jpg" alt="Xiaomi 16 Ultra">
+                        <button class="product-quick-view" data-product="23">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Xiaomi</div>
+                        <h3 class="product-title">Xiaomi 16 Ultra</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8 Gen 2</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.7"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>50 МП x4</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Фотографический флагман с системой камер Leica</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-white active"></div>
+                            <div class="color-dot color-black"></div>
+                            <div class="color-dot color-green"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">1TB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">95 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="23">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="23">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xiaomi 15 Ultra -->
+                <div class="product-card" data-category="xiaomi new">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Xiaomi 15 Ultra_ ya conocemos sus principales especificaciones.jpg" alt="Xiaomi 15 Ultra">
+                        <button class="product-quick-view" data-product="24">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Xiaomi</div>
+                        <h3 class="product-title">Xiaomi 15 Ultra</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8 Gen 2</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.7"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>50 МП x4</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Ультра-камера с четырьмя сенсорами Leica</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-black active"></div>
+                            <div class="color-dot color-white"></div>
+                            <div class="color-dot color-orange"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">256GB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">84 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="24">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="24">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xiaomi 17 -->
+                <div class="product-card" data-category="xiaomi new">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Xiaomi 15T 5G Dual Sim 12GB RAM 256GB - Grey - Tech 2 Tech.jpg" alt="Xiaomi 17">
+                        <button class="product-quick-view" data-product="25">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Xiaomi</div>
+                        <h3 class="product-title">Xiaomi 17</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8s Gen 3</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.4"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>50 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Баланс мощности и стоимости с камерой Leica</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-gray active"></div>
+                            <div class="color-dot color-black"></div>
+                            <div class="color-dot color-blue"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">256GB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">76 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="25">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="25">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xiaomi 16 -->
+                <div class="product-card" data-category="xiaomi new">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Xiaomi 15T 12_512GB - Rose Gold.jpg" alt="Xiaomi 16">
+                        <button class="product-quick-view" data-product="26">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Xiaomi</div>
+                        <h3 class="product-title">Xiaomi 16</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8s Gen 2</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.4"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>50 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Популярная модель с отличной камерой и быстрой зарядкой</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-rose active"></div>
+                            <div class="color-dot color-black"></div>
+                            <div class="color-dot color-blue"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">256GB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">75 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="26">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="26">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xiaomi 15 -->
+                <div class="product-card" data-category="xiaomi new">
+                    <div class="product-badge new">NEW</div>
+                    
+                    <div class="product-image">
+                        <img src="/photo/Xiaomi 14t Dual Sim 512 Gb Cinza Titânio 12 Gb Ram.jpg" alt="Xiaomi 15">
+                        <button class="product-quick-view" data-product="27">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <div class="product-category">Xiaomi</div>
+                        <h3 class="product-title">Xiaomi 15</h3>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>Snapdragon 8s Gen 2</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mobile"></i>
+                                <span>6.4"</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-camera"></i>
+                                <span>50 МП</span>
+                            </div>
+                        </div>
+                        
+                        <p class="product-description">Доступный флагман с камерой Leica и быстрой зарядкой</p>
+                        
+                        <div class="product-colors">
+                            <div class="color-dot color-gray active"></div>
+                            <div class="color-dot color-black"></div>
+                            <div class="color-dot color-blue"></div>
+                        </div>
+                        
+                        <div class="product-memory">
+                            <div class="memory-option active">512GB</div>
+                            <div class="memory-option">256GB</div>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-current">64 990 сом</div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-outline btn-details" data-product="27">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Подробнее</span>
+                            </button>
+                            <button class="btn btn-primary btn-add" data-product="27">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="products-footer">
+                <button class="btn btn-outline btn-load-more">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>Показать еще товары</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Технологии -->
+    <section id="tech" class="tech-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-badge">Технологии</div>
+                <h2 class="section-title">Инновационные Технологии</h2>
+                <p class="section-description">Мы следим за последними трендами и внедряем самые передовые технологии</p>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="tech-title">Искусственный Интеллект</h3>
+                    <p class="tech-description">Умные камеры с AI для идеальных фотографий в любых условиях</p>
+                    <div class="tech-features">
+                        <span class="tech-feature">Распознавание сцен</span>
+                        <span class="tech-feature">Ночной режим</span>
+                        <span class="tech-feature">Портрет AI</span>
+                    </div>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="tech-title">Безопасность</h3>
+                    <p class="tech-description">Многоуровневая защита данных и приватности</p>
+                    <div class="tech-features">
+                        <span class="tech-feature">3D Face ID</span>
+                        <span class="tech-feature">Защита Knox</span>
+                        <span class="tech-feature">Шифрование E2E</span>
+                    </div>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="tech-title">Энергоэффективность</h3>
+                    <p class="tech-description">До 48 часов работы от одного заряда</p>
+                    <div class="tech-features">
+                        <span class="tech-feature">Быстрая зарядка</span>
+                        <span class="tech-feature">Беспроводная зарядка</span>
+                        <span class="tech-feature">Эко-режим</span>
+                    </div>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3 class="tech-title">Гейминг Оптимизация</h3>
+                    <p class="tech-description">Максимальная производительность для игр</p>
+                    <div class="tech-features">
+                        <span class="tech-feature">120 Гц дисплей</span>
+                        <span class="tech-feature">Liquid Cooling</span>
+                        <span class="tech-feature">Режим геймера</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Локация -->
+    <section id="location" class="location-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-badge">Контакты</div>
+                <h2 class="section-title">Наш Магазин в Оше</h2>
+                <p class="section-description">Приходите к нам в гости или свяжитесь удобным способом</p>
+            </div>
+            
+            <div class="location-content">
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>ул. Ленина, 123, Ош</h3>
+                        <p>Нажмите для открытия карты</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h4>Адрес</h4>
+                            <p>улица Ленина, 123, Ош, Кыргызстан</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h4>Телефон</h4>
+                            <p>+996 701 008 108</p>
+                            <p>+996 312 54 20 20</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h4>Режим работы</h4>
+                            <p>Пн-Сб: 9:00 - 21:00</p>
+                            <p>Вс: 10:00 - 20:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h4>Email</h4>
+                            <p>info@ala-too-mobile.kg</p>
+                            <p>sales@ala-too-mobile.kg</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно продукта -->
+    <div id="productModal" class="modal">
+        <div class="modal-overlay" onclick="closeModal('productModal')"></div>
+        <div class="modal-container product-modal">
+            <button class="modal-close" onclick="closeModal('productModal')">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-content" id="productModalContent">
+                <!-- Динамическое содержимое загружается из JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно корзины -->
+    <div id="cartModal" class="modal">
+        <div class="modal-overlay" onclick="closeCart()"></div>
+        <div class="modal-container cart-modal">
+            <div class="modal-header">
+                <h2 class="modal-title">
+                    <i class="fas fa-shopping-cart"></i>
+                    Корзина
+                </h2>
+                <button class="modal-close" onclick="closeCart()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="cart-items" id="cartItems">
+                    <!-- Динамическое содержимое -->
+                </div>
+                
+                <div class="cart-empty" id="cartEmpty">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Корзина пуста</h3>
+                    <p>Добавьте товары, чтобы продолжить покупки</p>
+                    <a href="#products" class="btn btn-primary" onclick="closeCart()">
+                        Перейти к покупкам
+                    </a>
+                </div>
+                
+                <div class="cart-summary" id="cartSummary">
+                    <div class="summary-row">
+                        <span>Товаров:</span>
+                        <span id="cartItemsCount">0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Скидка:</span>
+                        <span class="text-success" id="cartDiscount">0 сом</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Итого:</span>
+                        <span class="price-total" id="cartTotal">0 сом</span>
+                    </div>
+                    
+                    <div class="cart-actions">
+                        <button class="btn btn-outline" onclick="closeCart()">
+                            Продолжить покупки
+                        </button>
+                        <button class="btn btn-primary" onclick="checkout()">
+                            Оформить заказ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Ala-Too Mobile</span>
+                    </div>
+                    <p class="footer-description">
+                        Ваш надежный партнер в мире мобильных технологий. 
+                        Мы предлагаем только оригинальную продукцию с официальной гарантией.
+                    </p>
+                    
+                    <div class="footer-newsletter">
+                        <h4>Подпишитесь на новости</h4>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Ваш email">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="links-column">
+                        <h4>Магазин</h4>
+                        <ul>
+                            <li><a href="#products">Все товары</a></li>
+                            <li><a href="#">Новинки</a></li>
+                            <li><a href="#">Распродажа</a></li>
+                            <li><a href="#">Аксессуары</a></li>
+                            <li><a href="#">Умные часы</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-column">
+                        <h4>Поддержка</h4>
+                        <ul>
+                            <li><a href="#">Гарантия</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Возврат</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#location">Контакты</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-column">
+                        <h4>Компания</h4>
+                        <ul>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">Блог</a></li>
+                            <li><a href="#">Вакансии</a></li>
+                            <li><a href="#">Партнеры</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="payment-methods">
+                    <span>Принимаем:</span>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Ala-Too Mobile. Все права защищены.</p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ergechov.06" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Всплывающее уведомление -->
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="notificationMessage">Товар добавлен в корзину</span>
+        </div>
+    </div>
+
+    <script src="seller-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
